@@ -1,0 +1,56 @@
+.home__section{
+    padding: 72px 0 85px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &__title{
+        font-size: 62px;
+        line-height: 68px;
+        color: $devPrimary;
+        font-family: $quicksand;
+        font-weight: bold;
+        padding-bottom: 20px;
+
+        @include breakpoint(medium down){
+            font-size: 32px;
+            line-height: 38px;
+        }
+    }
+
+    &__subtitle{
+        font-size: 38px;
+        line-height: 44px;
+        color: $devPrimary;
+        font-family: $quicksand;
+        font-weight: bold;
+        padding-bottom: 24px;
+
+        @include breakpoint(medium down){
+            font-size: 26px;
+            line-height: 32px;
+        }
+    }
+
+    &__description{
+        p{
+            color: #161616;
+            font-size: 17px;
+            line-height: 28px;
+            font-family: $lato;
+            margin-bottom: .5rem;
+        }
+        padding-bottom: 40px;
+    }
+
+    &__link{
+        .button{
+            padding: 16px 50px;
+            font-size: 16.5px;
+        }
+
+        @include breakpoint(medium down){
+            text-align: center;    
+        }
+    }
+}

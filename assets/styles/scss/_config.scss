@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+$lato: 'Lato', sans-serif;
+$quicksand: 'Quicksand', sans-serif;
+
+$devPrimary: #1C3E95;
+$devSecondary: #FE7A22;
+
+.grid-x{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.button{
+    background: $devSecondary;
+    border-radius: 10px;
+    padding: 14px 74px;
+    font-family: $quicksand;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+
+    &:hover,
+        &:focus,
+        &:active,
+        &:target,
+        .button.disabled, 
+        .button.disabled:focus, 
+        .button.disabled:hover, 
+        .button[disabled], 
+        .button[disabled]:focus, 
+        .button[disabled]:hover{
+        background: darken($devSecondary, 10%);
+    }
+}
+
+.grid-padding-x>.cell {
+    @include breakpoint(large up){
+        padding-right: 0.6rem;
+        padding-left: 0.6rem;    
+    }
+}

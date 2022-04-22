@@ -1,0 +1,12 @@
+.fancybox-container {
+    font-family: $body-font-family;
+}
+
+.fancybox-bg {
+    background: #666;
+    opacity: 0;
+}
+
+.fancybox-is-open .fancybox-bg {
+    opacity: 0.3;
+}

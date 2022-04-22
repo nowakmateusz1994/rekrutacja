@@ -1,0 +1,83 @@
+.footer{
+    background: $devPrimary;
+    margin: 0;
+    color: #fff;
+    padding: 60px 0 90px;
+
+    @include breakpoint(medium down){
+        padding-bottom: 0;
+    }
+
+    .widgettitle,
+    h4{
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 26px;
+        font-family: $quicksand;
+        padding-bottom: 15px;
+        margin-bottom: 0;
+    }
+
+    .widget_nav_menu{
+        .menu{
+            .menu-item{
+                display: block;
+                width: 100%; 
+
+                a{
+                    color: #fff;
+                    transition: .3s all;
+                    padding: 0;
+                    font-size: 16px;
+                    line-height: 26px;
+
+                    &:hover{
+                        color: $devSecondary;
+                    }
+                }   
+            }
+        }   
+
+        .menu .active>a, .menu .is-active>a {
+            background: transparent;
+            color: $devSecondary;
+        }
+    }
+
+    .phone{
+        color: $devSecondary;
+        letter-spacing: -0.25px;
+        font-weight: bold;
+        font-size: 25px;
+        line-height: 26px;
+
+        &:hover{
+            color: darken($devSecondary, 10%);
+        }
+    }
+
+    .grid-padding-x>.cell {
+        padding-right: 0.8rem;
+        padding-left: 0.8rem;
+
+        .medium-3{
+            padding: 1rem;
+        }
+    }
+
+    @include breakpoint(small only){
+        .cell{
+            padding-bottom: 2.875rem;
+            text-align: center;
+
+            &:after{
+                content: '';
+                width: 33%;
+                height: 1px;
+                background: $devSecondary;
+                display: block;
+                margin: 1rem auto;
+            }
+        }
+    }
+}

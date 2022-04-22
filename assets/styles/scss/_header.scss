@@ -1,0 +1,75 @@
+.top-bar{
+    padding: 13px 0 18px;
+    justify-content: center;
+    align-items: flex-end;
+    transition: .3s all;
+
+    @include breakpoint(large down){
+        padding: 18px;
+        justify-content: space-between;
+
+    }
+
+    &-left,
+    &-right{
+        flex: 0 0 auto !important;
+        margin: 0 !important;
+    }
+
+    &, & ul{
+        background: transparent;
+    }
+
+    &-right{
+        padding: 0 36px;
+        
+        @include breakpoint(medium down){
+            padding: 0;
+        }
+    }
+}
+
+.dropdown.menu>li>a{
+    padding: 8px 14px;
+
+    @include breakpoint(large down){
+        padding: 8px;
+    }
+}
+
+.menu{
+    &-item{
+        a{
+            color: $devPrimary;
+            font-family: $lato;
+            font-size: 24px;
+            line-height: 26px;
+            font-weight: medium;
+            transition: .3s all;
+
+            @include breakpoint(large down){
+                font-size: 18px;
+                line-height: 22px;
+            }
+
+            &:hover{
+                color: $devSecondary;
+            }
+        }
+    }  
+}
+
+.mobile-menu{
+    a{
+        color: $devPrimary;
+        font-size: 32px;
+
+        &:hover{
+            color: $devSecondary;
+        }
+    }   
+}
+
+.custom-logo{
+    transition: .3s all;
+}

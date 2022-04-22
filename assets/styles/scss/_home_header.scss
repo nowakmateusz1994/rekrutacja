@@ -1,0 +1,166 @@
+.home__header{
+    min-height: 732px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+
+    &__blue{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background: rgba($devPrimary, .75);
+        padding: 54px 0 64px;
+
+        @include breakpoint(medium down){
+            padding: 150px 0 64px;
+        }
+        
+        .medium-7{
+            @include breakpoint(large down){
+                max-width: 40%;
+                flex-basis: 40%;
+            }
+            
+            @include breakpoint(medium down){
+                max-width: 100%;
+                flex-basis: 100%;
+            }
+        }
+    }
+
+    &__title{
+        color: $devSecondary;
+        font-family: $quicksand;
+        font-weight: bold;
+        font-size: 52px;
+        line-height: 56px;
+        padding-bottom: 13px;
+
+        @include breakpoint(large down){
+            font-size: 32px;
+            line-height: 36px;
+        }
+    }
+
+    &__subtitle{
+        color: #fff;
+        font-family: $quicksand;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 36px;
+
+        @include breakpoint(large down){
+            font-size: 22px;
+            line-height: 26px;
+        }
+    }
+
+    &__form{
+        height: 732px;
+        position: relative;
+        
+        @include breakpoint(medium down){
+            height: calc(604px + 350px);
+        }
+
+        .contact__form{
+            padding: 40px;
+            position: absolute;
+            max-height: 604px;
+            max-width: 489px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 8px 48px #16161614;
+            z-index: 9;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+
+            @include breakpoint(medium down){
+                padding: 20px;
+                margin: 1rem;
+                top: 40%;
+            }
+            
+            &__title{
+                padding-bottom: 20px;
+                color: $devPrimary;
+                font-size: 24px;
+                line-height: 26px;
+                font-family: $quicksand;
+                font-weight: bold;
+                
+                @include breakpoint(medium down){
+                    font-size: 17px;
+                    padding-bottom: 15px;
+                }
+            }
+
+            input{
+                margin-bottom: 12px;
+                padding: 23px 16px;
+                color: #161616;
+                border: 1px solid #979494;
+                box-shadow: none;
+
+                &::placeholder {
+                    color: #161616;
+                }
+                
+                @include breakpoint(medium down){
+                    margin-bottom: 8px;
+                    padding: 15px 16px;
+                }
+            }
+
+            .wpcf7-list-item{
+                margin: 0 0 0 1.5rem;
+                margin-bottom: 1rem;
+
+                label{
+                    color: #161616;
+                    font-weight: 300;
+                    font-size: 13px;
+                    line-height: 18px;
+                    font-family: $lato;
+                }
+            }
+
+            input[type=checkbox]{
+                margin-left: -1.5rem;
+                margin-bottom: 0;
+            }
+
+            &__button{
+                text-align: center;
+                .button{
+                    font-size: 17px;
+                    line-height: 21px;
+                    font-weight: bold;
+                    padding: 14px 79px;
+                    display: block;
+                    margin: 0 auto;
+                    color: #fff;
+                    border: none;
+
+                    &:hover,
+                        &:focus,
+                        &:active,
+                        &:target,
+                        &.disabled, 
+                        &.disabled:focus, 
+                        &.disabled:hover, 
+                        &[disabled], 
+                        &[disabled]:focus, 
+                        &[disabled]:hover{
+                        background: darken($devSecondary, 10%);
+                    }
+
+                }
+
+
+            }
+        }
+    }
+}
